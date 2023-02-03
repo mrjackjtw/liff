@@ -18,11 +18,7 @@
   <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
 
   <script src="js/vconsole.min.js"></script> 
-  <script>
-   //var vConsole = new VConsole()
-   //console.log("Hello World!111")
-   //errorPlease()
- </script> 
+ 
 
   <script>
     // Query Params
@@ -44,21 +40,22 @@
     
      async function main()
      {     
-      await liff.init({ liffId: "1657868181-xneO5rGJ" })
-      var vConsole = new VConsole()
-      liff.ready.then(()=>{
-          document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-          console.log("login: "+liff.isLoggedIn())
-          if (liff.isLoggedIn())
-          {
-            getUserProfile()
-          }
-          else {
-            liff.login({ redirectUri: "https://mrjackjtw.github.io/liff/path" })
-          }
+        await liff.init({ liffId: "1657868181-xneO5rGJ" })
+        //var vConsole = new VConsole()
+       
+        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+        //console.log("login: "+liff.isLoggedIn())
+        if (liff.isLoggedIn())
+        {
+          getUserProfile()
+        }
+        else {
+          liff.login({ redirectUri: "https://mrjackjtw.github.io/liff/path" })
+        }
 
-        })
+        
      }
+     main()
   </script>
 </body>
 </html>
