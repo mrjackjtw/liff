@@ -19,8 +19,8 @@
 
   <script src="js/vconsole.min.js"></script> 
   <script>
-   var vConsole = new VConsole()
-   console.log("Hello World!111")
+   //var vConsole = new VConsole()
+   //console.log("Hello World!111")
    //errorPlease()
  </script> 
 
@@ -45,7 +45,7 @@
      async function main()
      {     
       await liff.init({ liffId: "1657868181-xneO5rGJ" })
-
+      var vConsole = new VConsole()
       liff.ready.then(()=>{
           document.getElementById("isLoggedIn").append(liff.isLoggedIn())
           console.log("login: "+liff.isLoggedIn())
