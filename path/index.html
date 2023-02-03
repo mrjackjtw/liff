@@ -14,6 +14,7 @@
   <p id="displayName"><b>displayName:</b> </p>
   <p id="statusMessage"><b>statusMessage:</b> </p>
   <p id="decodedIDToken"><b>email:</b> </p>
+  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
   <script>
     // Query Params
     const queryString = decodeURIComponent(window.location.search);
@@ -35,6 +36,7 @@
      async function main()
      {     
         await liff.init({ liffId: "1657868181-xneO5rGJ" })
+        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
         if (liff.isLoggedIn())
         {
           getUserProfile()
