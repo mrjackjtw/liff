@@ -21,7 +21,7 @@
   <script>
    var vConsole = new VConsole()
    console.log("Hello World!111")
-   errorPlease()
+   //errorPlease()
  </script> 
 
   <script>
@@ -48,7 +48,7 @@
 
       liff.ready.then(()=>{
           document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-           //console.log("login: "+liff.isLoggedIn())
+          console.log("login: "+liff.isLoggedIn())
           if (liff.isLoggedIn())
           {
             getUserProfile()
