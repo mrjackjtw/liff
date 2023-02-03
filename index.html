@@ -47,7 +47,14 @@
     function createUniversalLink() {
     }
 
-    async function shareMsg() {
+    async function shareMsg() 
+    {
+        await liff.shareTargetPicket([
+            {
+              "type":"text",
+              "text":"This messate was sent by ShareTargetPicker"
+            }
+          ])    
     }
 
     function logOut() 
