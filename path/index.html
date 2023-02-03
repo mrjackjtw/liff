@@ -33,12 +33,13 @@
     }
     
      async function main()
-     {
-        await liff.init({liffId:"1657868181-xneO5rGJ"})
-        if (liff.isLoggedIn()) 
+     {     
+        await liff.init({ liffId: "1657868181-xneO5rGJ" })
+        if (liff.isLoggedIn())
         {
-            getUserProfile()
-        }else {
+          getUserProfile()
+        }
+        else {
           liff.login({redirectUri:"https://mrjackjtw.github.io/liff/path"})
         }
      }
