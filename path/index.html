@@ -16,6 +16,14 @@
   <p id="statusMessage"><b>statusMessage:</b> </p>
   <p id="decodedIDToken"><b>email:</b> </p>
   <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
+
+  <script src="js/vconsole.min.js"></script> -
+  <script>
+   var vConsole = new VConsole()
+   //console.log("Hello World!")
+   //errorPlease()
+ </script> 
+
   <script>
     // Query Params
     const queryString = decodeURIComponent(window.location.search);
@@ -40,6 +48,7 @@
 
       liff.ready.then(()=>{
           document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+           console.log("login: "+liff.isLoggedIn())
           if (liff.isLoggedIn())
           {
             getUserProfile()
